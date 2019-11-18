@@ -1,0 +1,24 @@
+# dependency and other dirs
+node_modules
+
+# logs and other files
+*.log
+*.csv
+
+# environment vars files
+*.env
+build.json
+
+
+# IDEs and OSX cache
+.idea
+.vscode
+.DS_Store
+
+
+# content caching
+tmp
+package-lock.json
+yarn.lock
+
+
