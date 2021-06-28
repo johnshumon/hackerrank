@@ -8,8 +8,7 @@ from typing import List
 
 
 class Solution:
-    @staticmethod
-    def fizzbuzz(n: int) -> List[str]:
+    def fizzbuzz(self, n: int) -> List[str]:
 
         fizzbuzz_list = []
         if n <= 0 or n > math.pow(10, 4):
@@ -29,8 +28,8 @@ class Solution:
 
 
 def main():
-    fb = Solution.fizzbuzz(15)
-    print(fb)
+    fb = Solution()
+    print(fb.fizzbuzz(15))
 
 
 if __name__ == "__main__":
