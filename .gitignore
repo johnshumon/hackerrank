@@ -1,5 +1,6 @@
 # dependency and other dirs
-node_modules
+venv
+virtualenv
 
 # logs and other files
 *.log
@@ -21,4 +22,6 @@ tmp
 package-lock.json
 yarn.lock
 
+# user defined
+test_snippets.*
 
