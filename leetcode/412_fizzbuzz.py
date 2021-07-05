@@ -1,6 +1,7 @@
 """FizzBuzz solution module"""
 
 # problem statement: https://leetcode.com/problems/fizz-buzz/
+# difficulty: easy
 
 import math
 

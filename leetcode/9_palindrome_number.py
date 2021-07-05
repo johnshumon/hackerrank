@@ -1,6 +1,7 @@
 """Palindrome number module"""
 
 # problem statement: https://leetcode.com/problems/palindrome-number
+# # difficulty: easy
 
 import math
 
@@ -19,10 +20,7 @@ class Solution:
         # > approach 1: chekcs str == reversed str
         # using string[::-1]
         # ** more pythonic way
-        if str_x == str_x[::-1]:
-            return True
-        else:
-            return False
+        return str_x == str_x[::-1]
 
         # > approach 2: chekcs str == reversed str
         # by looping through front and back
