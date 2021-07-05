@@ -5,7 +5,7 @@
 
 
 class Solution:
-    def longest_palindrome_subseq(self, given_str: str):
+    def longest_palindrome_subseq(self, given_str: str) -> str:
         str_length = len(given_str)
 
         start = 0
