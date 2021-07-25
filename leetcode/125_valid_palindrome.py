@@ -1,6 +1,7 @@
 """Valid palindrome checking module"""
 
 # problem statement: https://leetcode.com/problems/valid-palindrome/submissions
+# difficulty: easy
 
 
 class Solution:

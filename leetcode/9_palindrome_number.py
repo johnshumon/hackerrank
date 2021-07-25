@@ -8,6 +8,7 @@ import math
 
 class Solution:
     """checks if a given number is a palindrome"""
+
     def is_palindrome(self, x: int) -> bool:
 
         # checks if given number is in the range
@@ -26,7 +27,7 @@ class Solution:
         # by looping through front and back
         str_len = len(str_x)
         end = str_len - 1
-        for i in range(str_len//2):
+        for i in range(str_len // 2):
             if str_x[i] != str_x[end - i]:
                 return False
         return True

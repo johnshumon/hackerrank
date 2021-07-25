@@ -3,8 +3,9 @@ Given a string s, return the number
 of palindromic substrings in it.
 """
 
-# https://leetcode.com/problems/palindromic-substrings/
+# problem statement: https://leetcode.com/problems/palindromic-substrings/
 # difficulty: medium
+
 
 class Solution:
     def count_substrings(self, given_str: str) -> str:
