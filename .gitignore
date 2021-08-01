@@ -1,6 +1,7 @@
 # dependency and other dirs
 venv
 virtualenv
+__pycache__/
 
 # logs and other files
 *.log
