@@ -7,7 +7,8 @@ class Solution:
     """Solution class"""
 
     def search(self, nums: List[int], target: int) -> int:
-        """Search function. returns the index of the
+        """
+        Search function. returns the index of the
         target element if found otherwise -1.
         """
         left, right = 0, len(nums) - 1

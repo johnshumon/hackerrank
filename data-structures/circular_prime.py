@@ -12,7 +12,8 @@ class Solution:
     """Solution class"""
 
     def get_circular_primes(self, limit: int) -> list:
-        """Returns the list of circular prime
+        """
+        Returns the list of circular prime
         for a given boundary.
         """
         if limit < 2 or limit > 10 ** 6:
@@ -43,7 +44,8 @@ class Solution:
 
     @staticmethod
     def rotate(rotate_str: str) -> list[str]:
-        """Returns true if all the rotations of a number
+        """
+        Returns true if all the rotations of a number
         is also prime. False otherwise.
         """
 
@@ -51,7 +53,9 @@ class Solution:
 
     @staticmethod
     def get_primes(limit: int) -> list:
-        """Returns list of primes for a given limit"""
+        """
+        Returns list of primes for a given limit
+        """
 
         # Return all between 2 to below 1
         # million. Empty list otherwise
