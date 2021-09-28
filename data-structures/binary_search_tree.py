@@ -288,8 +288,9 @@ def main():
     # get distance between nodes
     print(
         "distance between {} and {} is: {}".format(
-            bst.left.left.right.key, bst.left.right.key,
-            solution.distance_between_nodes(bst, bst.left.left.right, bst.left.right)
+            bst.left.left.right.key,
+            bst.left.right.key,
+            solution.distance_between_nodes(bst, bst.left.left.right, bst.left.right),
         )
     )
 
