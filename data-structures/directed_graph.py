@@ -10,6 +10,7 @@ Directed graph module
 # Graph with cycles
 
 from collections import defaultdict
+from queue import Queue
 from typing import Any, Dict, List, Set
 
 
@@ -115,8 +116,29 @@ def dfs_traversal(graph: DGraph, node: Any, visited: List[Any]) -> Set:
     return visited
 
 
-# def bfs_walk():
-#     pass
+def bfs_traversal(graph: DGraph, node: Any):
+    """
+    Does bepth first search (BFS) over a graph.
+
+    Begins with the starting node and returns the
+    BFS traversal order of the nodes in the graph.
+    """
+
+    visited = []
+    queue = Queue()
+
+    visited.append(node)
+    queue.put(node)
+
+    while not queue.empty():
+        current_node = queue.get()
+
+        for neighbour in graph.adj_list[current_node]:
+            if neighbour not in visited:
+                queue.put(neighbour)
+                visited.append(neighbour)
+
+    return visited
 
 
 if __name__ == "__main__":
@@ -135,3 +157,4 @@ if __name__ == "__main__":
     print(f"Paths between 'a' & 'c' are: {dg.get_paths('a', 'c', [])}")
     print(f"Shortest path between 'a' & 'c' are: {dg.get_shortest_path('a', 'c')}")
     print(f"DFS walk of the graph: {dfs_traversal(dg, 'a', [])}")
+    print(f"BFS walk of the graph: {bfs_traversal(dg, 'a')}")
