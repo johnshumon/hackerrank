@@ -31,6 +31,8 @@ class DGraph:
         there's an edge in the graph from u -> v.
         """
 
+        # TODO: sanity check for empty list of tuples
+
         for start, end in edges:
             if start in self.adj_list:
                 self.adj_list[start].append(end)
@@ -90,7 +92,7 @@ class DGraph:
 #         pass
 
 
-def dfs_traversal(graph: DGraph, node: Any, dfs_order: List[Any], visited: Set[Any]) -> Set:
+def dfs_traversal(graph: DGraph, node: Any, visited: List[Any]) -> Set:
     """
     Does depth first search (DFS) over a graph.
 
@@ -105,13 +107,12 @@ def dfs_traversal(graph: DGraph, node: Any, dfs_order: List[Any], visited: Set[A
         # Set unions. list is used to keep the traversal
         # order correct. Because both 'union & set.add'
         # different order in different times.
-        visited |= set(node)
-        dfs_order.append(node)
+        visited.append(node)
 
         for neighbour in graph.adj_list[node]:
-            dfs_traversal(graph, neighbour, dfs_order, visited)
+            dfs_traversal(graph, neighbour, visited)
 
-    return dfs_order
+    return visited
 
 
 # def bfs_walk():
@@ -127,9 +128,10 @@ if __name__ == "__main__":
 
     dg.connect_edges(("a", "b"), ("a", "c"), ("a", "e"))
     dg.connect_edges(("b", "d"), ("b", "e"), ("c", "e"), ("d", "c"))
+    # dg.connect_edges("")
 
     print(f"Adjacency-list: {dg.adj_list}")
 
     print(f"Paths between 'a' & 'c' are: {dg.get_paths('a', 'c', [])}")
     print(f"Shortest path between 'a' & 'c' are: {dg.get_shortest_path('a', 'c')}")
-    print(f"DFS walk of the graph: {dfs_traversal(dg, 'a', [], visited=set())}")
+    print(f"DFS walk of the graph: {dfs_traversal(dg, 'a', [])}")
