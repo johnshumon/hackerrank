@@ -1,5 +1,8 @@
 """Graph path finding module"""
 
+# problem statement: https://leetcode.com/problems/find-if-path-exists-in-graph
+# # difficulty: easy
+
 from collections import defaultdict
 from typing import Dict, List, Optional, Set
 
