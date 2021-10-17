@@ -8,6 +8,7 @@ class Solution:
     """
     Solution class
     """
+
     def roman_to_int(self, s: str) -> int:
         """
         Returns integer value of the given roman numeral.
@@ -59,7 +60,7 @@ class Solution:
             "L": 50,
             "C": 100,
             "D": 500,
-            "M": 1000
+            "M": 1000,
         }
 
         return lookups[roman_numeral] if roman_numeral in lookups else 0

@@ -9,7 +9,6 @@ class Node:
 
 
 class Solution:
-
     def insert_node(self, node: Node, key: int) -> Node:
         """Inserts a node in the tree"""
         # > Tree is empty

@@ -18,6 +18,7 @@ class Solution:
     """
     Solution class
     """
+
     def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
         return self.build_tree(nums, 0, len(nums) - 1)
 

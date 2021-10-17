@@ -41,5 +41,9 @@ class Solution:
 if __name__ == "__main__":
     solution = Solution()
 
-    print(solution.eval_rpn(["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]))
+    print(
+        solution.eval_rpn(
+            ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
+        )
+    )
     print(solution.eval_rpn(["4", "13", "5", "/", "+"]))
