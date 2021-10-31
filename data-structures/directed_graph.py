@@ -89,8 +89,9 @@ class DGraph:
         # of all the lists, min length list is returned.
         return min(self.get_paths(start, end, []), key=len)
 
-#     def is_disjoint():
-#         pass
+    def is_disjoint():
+        print(True)
+        # dfs traversal of the graph
 
 
 def dfs_traversal(graph: DGraph, node: Any, visited: List[Any]) -> Set:

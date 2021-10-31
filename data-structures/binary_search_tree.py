@@ -1,11 +1,13 @@
 """Binary Search Tree module"""
 
+from typing import List, Optional
+
 from utils import bst_graph  # pylint: disable=import-error
 
 
 # Definition for a binary tree node.
 class Node:
-    "Node structure of the tree"
+    """Node structure of the tree"""
 
     def __init__(self, key):
         self.key = key
@@ -174,7 +176,7 @@ class Solution:
 
         return parent
 
-    def inorder_traversal(self, node: Node) -> list:
+    def inorder_traversal(self, node: Node) -> List:
         """Returns in-order traversal list of a given BST.
         > Traverse order: left -> root -> right
         """
@@ -193,7 +195,7 @@ class Solution:
 
         return elements
 
-    def preorder_traversal(self, node: Node) -> list:
+    def preorder_traversal(self, node: Node) -> List:
         """Returns pre-order traversal list of a given BST.
         > Traverse order: root -> left -> right
         """
@@ -212,7 +214,7 @@ class Solution:
 
         return elements
 
-    def postorder_traversal(self, node: Node) -> list:
+    def postorder_traversal(self, node: Node) -> List:
         """Returns post-order traversal list of a given BST.
         > Traverse order: left -> right -> root
         """
@@ -230,7 +232,7 @@ class Solution:
 
         return elements
 
-    def build_tree(self, elements: list) -> list:
+    def build_tree(self, elements: list) -> Optional[Node]:
         """build a binary search tree with the
         given list of elements
         """

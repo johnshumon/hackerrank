@@ -1,6 +1,6 @@
 """Binary search module"""
 
-# problem statement: https://leetcode.com/problems/binary-search/
+# problem statement: https://leetcode.com/problems/binary-search
 # difficulty: easy
 
 from typing import List
