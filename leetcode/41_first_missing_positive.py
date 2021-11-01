@@ -1,6 +1,6 @@
 """First positive integer module"""
 
-# problem statement: https://leetcode.com/problems/find-if-path-exists-in-graph
+# problem statement: https://leetcode.com/problems/first-missing-positive
 # difficulty: hard
 
 from collections import defaultdict
