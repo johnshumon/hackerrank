@@ -207,10 +207,10 @@ class Solution:
         elements.append(node.key)
 
         if node.left:
-            elements += self.inorder_traversal(node.left)
+            elements += self.preorder_traversal(node.left)
 
         if node.right:
-            elements += self.inorder_traversal(node.right)
+            elements += self.preorder_traversal(node.right)
 
         return elements
 
@@ -224,9 +224,9 @@ class Solution:
             return None
 
         if node.left:
-            elements += self.inorder_traversal(node.left)
+            elements += self.postorder_traversal(node.left)
         if node.right:
-            elements += self.inorder_traversal(node.right)
+            elements += self.postorder_traversal(node.right)
 
         elements.append(node.key)
 

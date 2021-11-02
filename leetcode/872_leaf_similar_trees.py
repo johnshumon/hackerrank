@@ -15,7 +15,9 @@ class TreeNode:
 
 
 class Solution:
-    def leaf_similar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
+    def leaf_similar(
+        self, root1: Optional[TreeNode], root2: Optional[TreeNode]
+    ) -> bool:
 
         # True if list of both tree's leaf nodes are equal
         # False otherwise.
@@ -45,4 +47,7 @@ if __name__ == "__main__":
     # ref: https://www.section.io/engineering-education/binary-tree-data-structure-python
     # e.g.: root = TreeNode, root.left = TreeNode(5), root.right(1)
 
-    solution.leaf_similar([3, 5, 1, 6, 2, 9, 8, None, None, 7, 4], [3, 5, 1, 6, 7, 4, 2, None, None, None, None, None, None, 9, 8])
+    solution.leaf_similar(
+        [3, 5, 1, 6, 2, 9, 8, None, None, 7, 4],
+        [3, 5, 1, 6, 7, 4, 2, None, None, None, None, None, None, 9, 8],
+    )
