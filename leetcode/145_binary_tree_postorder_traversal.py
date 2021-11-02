@@ -1,6 +1,6 @@
 """Binary tree Postorder traversal module"""
 
-# problem statement: https://leetcode.com/problems/binary-tree-inorder-traversal
+# problem statement: https://leetcode.com/problems/binary-tree-postorder-traversal
 # difficulty: easy
 
 from typing import List, Optional
@@ -15,10 +15,9 @@ class TreeNode:
 
 
 class Solution:
-    def inorder_traversal(self, root: Optional[TreeNode]) -> List[int]:
-
-        """Returns in-order traversal list of a given BST.
-        > Traverse order: left -> root -> right
+    def postorder_traversal(self, root: Optional[TreeNode]) -> List[int]:
+        """Returns post-order traversal list of a given BST.
+        > Traverse order: left -> right -> root
         """
         elements = []
 
@@ -26,11 +25,11 @@ class Solution:
             return None
 
         if root.left:
-            elements += self.inorder_traversal(root.left)
-
-        elements.append(root.val)
+            elements += self.postorder_traversal(root.left)
 
         if root.right:
-            elements += self.inorder_traversal(root.right)
+            elements += self.postorder_traversal(root.right)
+
+        elements.append(root.val)
 
         return elements
